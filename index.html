@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pista de Velocidad Hot Wheels</title>
+  <style>
+    :root {
+      --orange: #ff5500;
+      --yellow: #ffcc00;
+      --blue: #002244;
+      --dark: #111111;
+      --light: #f4f4f4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--dark);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 20px;
+      color: var(--light);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 85, 0, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 204, 0, 0.15) 0%, transparent 40%);
+    }
+
+    .card-container {
+      background: linear-gradient(145deg, #1e1e1e, #141414);
+      border: 3px solid var(--orange);
+      border-radius: 20px;
+      max-width: 480px;
+      width: 100%;
+      padding: 30px 25px;
+      box-shadow: 0 10px 30px rgba(255, 85, 0, 0.3), inset 0 0 15px rgba(255, 204, 0, 0.1);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Pista decorativa en los bordes */
+    .card-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--yellow),
+        var(--yellow) 15px,
+        var(--orange) 15px,
+        var(--orange) 30px
+      );
+    }
+
+    .flame-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      color: #000;
+      font-weight: 900;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(255, 85, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 0px var(--orange), 4px 4px 0px #000;
+      line-height: 1.1;
+    }
+
+    .car-icon {
+      font-size: 3.5rem;
+      margin: 15px 0;
+      animation: drive 2s ease-in-out infinite alternate;
+      display: inline-block;
+    }
+
+    @keyframes drive {
+      0% { transform: translateX(-10px) rotate(-2deg); }
+      100% { transform: translateX(10px) rotate(2deg); }
+    }
+
+    .message-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid var(--yellow);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: left;
+      position: relative;
+    }
+
+    .message-box p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #e0e0e0;
+      margin-bottom: 12px;
+    }
+
+    .message-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      color: var(--yellow);
+      font-weight: bold;
+    }
+
+    .footer-flag {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .flag {
+      display: inline-block;
+      width: 20px;
+      height: 12px;
+      background: repeating-conic-gradient(#fff 0% 25%, #000 0% 50%) 50% / 8px 8px;
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="flame-badge">Pista Exclusiva</div>
+    <h1>¡A Toda Velocidad!</h1>
+    
+    <div class="car-icon">🏎️🔥</div>
+
+    <div class="message-box">
+      <p>La vida es como una pista <span class="highlight">Hot Wheels</span>: llena de curvas e inesperadas vueltas de 360°, pero cada rampa está hecha para hacerte volar más alto.</p>
+      
+      <p>No importa qué tan difícil se vea la carrera, <span class="highlight">tienes el motor, la fuerza y el estilo</span> para acelerar al máximo y superar cualquier obstáculo.</p>
+      
+      <p>¡Mantén la pasión encendida, toma el volante de tu destino y nunca dejes de acelerar hacia tus sueños!</p>
+    </div>
+
+    <div class="footer-flag">
+      <span class="flag"></span>
+      <span>¡Edición Especial de Colección!</span>
+      <span class="flag"></span>
+    </div>
+  </div>
+
+</body>
+</html>
